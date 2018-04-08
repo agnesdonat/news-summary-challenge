@@ -7,6 +7,16 @@
     <div id="app">
       hello
     </div>
+    <script src='lib/news-model.js'></script>
+    <script src='lib/news-list-model.js'></script>
+    <script src='lib/news-list-view.js'></script>
     <script src="news-controller.js"></script>
+    <script>
+    var news = new News("First headline");
+    var list = new List();
+    var view = new View(list);
+    var newsController = new NewsController(list);
+    newsController.getHTML()
+    </script>
     </body>
 </html>
